@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Agent 多型態文件分析與維修系統 | 畢業專題</title>
-    <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- 引入 Google Fonts (Noto Sans TC) -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -65,7 +62,6 @@
 </head>
 <body class="bg-slate-900 text-slate-300 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-    <!-- 導覽列 -->
     <nav class="fixed w-full z-50 glass-card border-b-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
@@ -80,7 +76,6 @@
                         <a href="#modules" class="hover:text-brand-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">核心模組</a>
                     </div>
                 </div>
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
                         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -88,7 +83,6 @@
                 </div>
             </div>
         </div>
-        <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#overview" class="block hover:bg-slate-700 hover:text-white px-3 py-2 rounded-md text-base font-medium">系統總覽</a>
@@ -98,10 +92,9 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwek0wIDBoMnYyaC0yeiIgZmlsbD0iIzMzNDE1NSIgZmlsbC1vcGFjaXR5PSIwLjEiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==')] opacity-50"></div>
-        
+         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
             <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 text-sm font-semibold tracking-wide">
                 115年畢業專題
@@ -120,10 +113,8 @@
             </div>
         </div>
 
-        <!-- 系統介面圖展示區 -->
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-20">
             <div class="rounded-xl overflow-hidden border border-slate-700 bg-slate-800 shadow-2xl image-glow transform hover:scale-[1.01] transition-transform duration-500">
-                <!-- 模擬瀏覽器標題列 -->
                 <div class="bg-slate-900 px-4 py-3 border-b border-slate-700 flex items-center">
                     <div class="flex space-x-2">
                         <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
@@ -136,28 +127,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- 介面圖片與 Fallback 處理 -->
                 <div class="bg-slate-800 flex justify-center items-center relative min-h-[300px] md:min-h-[500px] w-full">
-                    <!-- 使用者上傳的截圖，加入 onerror 以防預覽環境找不到本地檔案 -->
-                    <img src="image_742c07.png" alt="太陽能設備維修智慧助手 - 系統介面" 
-                         class="w-full h-auto object-contain relative z-10"
-                         onerror="this.style.display='none'; document.getElementById('image-fallback').classList.remove('hidden');">
-                    
-                    <!-- 預覽環境或檔案遺失時的替代畫面 -->
-                    <div id="image-fallback" class="absolute inset-0 flex flex-col items-center justify-center text-slate-400 hidden bg-slate-800 z-0">
-                        <i data-lucide="image" class="w-16 h-16 mb-4 text-slate-600"></i>
-                        <p class="text-lg font-medium text-white mb-2">系統介面預覽區塊</p>
-                        <p class="text-sm text-slate-400 max-w-md text-center leading-relaxed">
-                            (找不到圖片檔案)<br>
-                            請確認資料夾內是否有 <code class="bg-slate-700 text-brand-400 px-1.5 py-0.5 rounded">image.png</code> 檔案。
-                        </p>
+                    <img src="image.png" alt="太陽能設備維修智慧助手 - 系統介面" 
+                         class="w-full h-auto object-contain relative z-10 block">
                     </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- 系統總覽 Section -->
     <section id="overview" class="py-20 bg-slate-900 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
@@ -221,7 +198,6 @@
         </div>
     </section>
 
-    <!-- 核心模組 Section -->
     <section id="modules" class="py-20 bg-slate-950 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -230,8 +206,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Module 1 -->
+                 
                 <div class="glass-card rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-blue-500/20 p-3 rounded-lg text-blue-400">
@@ -257,7 +232,6 @@
                     </ul>
                 </div>
 
-                <!-- Module 2 -->
                 <div class="glass-card rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-indigo-500/20 p-3 rounded-lg text-indigo-400">
@@ -283,7 +257,6 @@
                     </ul>
                 </div>
 
-                <!-- Module 3 -->
                 <div class="glass-card rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-purple-500/20 p-3 rounded-lg text-purple-400">
@@ -309,7 +282,6 @@
                     </ul>
                 </div>
 
-                <!-- Module 4 -->
                 <div class="glass-card rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-orange-500/20 p-3 rounded-lg text-orange-400">
@@ -331,7 +303,6 @@
                     </ul>
                 </div>
 
-                <!-- Module 5 -->
                 <div class="glass-card rounded-2xl p-6 hover:-translate-y-2 transition-transform duration-300 group md:col-span-2 lg:col-span-1">
                     <div class="flex items-center justify-between mb-4">
                         <div class="bg-emerald-500/20 p-3 rounded-lg text-emerald-400">
@@ -361,7 +332,6 @@
         </div>
     </section>
 
-    <!-- 系統亮點 / 架構圖替代文字 -->
     <section id="architecture" class="py-20 bg-slate-900 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-gradient-to-r from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 border border-slate-700 shadow-2xl relative overflow-hidden">
@@ -411,7 +381,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-950 py-12 border-t border-slate-800 text-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center items-center mb-6">
